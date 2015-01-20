@@ -8,6 +8,17 @@
 #
 
 
+bash "install_something" do
+  user "root"
+  cwd "/tmp"
+  code <<-EOH
+   sudo apt-get install software-properties-common python-software-properties -y
+   sudo add-apt-repository ppa:webupd8team/java
+   send "\n"
+   sudo apt-get update
+  EOH
+end
+
 
 cookbook_file "/opt/installjava.sh" do
   source "installjava.sh"
