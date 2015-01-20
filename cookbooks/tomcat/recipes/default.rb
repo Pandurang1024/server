@@ -14,10 +14,10 @@ cookbook_file "/opt/installjava.sh" do
   mode "0677"
 end
 
-bash "installjava" do
-  guard_interpreter :bash
-  code "/opt/installjava.sh"
-end
+#bash "installjava" do
+ # guard_interpreter :bash
+  #code "/opt/installjava.sh"
+#end
 
 package "tomcat7" do
 	action :install
