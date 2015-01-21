@@ -18,11 +18,12 @@ end
 
 execute 'createusr' do
  cwd '/var'
- command 'mysql -u root -e "CREATE USER 'rezoomex'@'localhost' IDENTIFIED BY 'password123'";'
+ command 'mysql -u root -e "CREATE USER \'rezoomex\'@\'localhost\' IDENTIFIED BY \'password123\'";'
 end
 
 
 execute 'createdb' do
- cwd '/var'
- command 'mysql -u root -e "create database rezoomex"; '
+cwd '/var'
+command 'mysql -u root -e "CREATE database IF NOT EXISTS rezoomex
+grant all on rezoomex.* to \'rezoomex\'@\'localhost\' identified by \'password123\'";'
 end
