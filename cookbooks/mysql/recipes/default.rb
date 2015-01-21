@@ -18,7 +18,7 @@ end
 
 execute 'createusr' do
  cwd '/var'
- command 'mysql -u root -e "CREATE USER \'rezoomex\'@\'localhost\' IDENTIFIED BY \'password123!@#\'";'
+ command 'mysql -u root -e "CREATE USER \'rezoomex\'@\'localhost\' IDENTIFIED BY \'password55##\'";'
 end
 
 
@@ -35,7 +35,7 @@ end
 
 execute 'grantdb' do
 cwd '/var'
-command 'mysql -u root -e "grant all on rezoomex.* to \'rezoomex\'@\'localhost\' identified by \'password123!@#\'";'
+command 'mysql -u root -e "grant all on rezoomex.* to \'rezoomex\'@\'localhost\' identified by \'password55##\'";'
 end
 
  
