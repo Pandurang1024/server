@@ -18,7 +18,7 @@ end
 
 execute 'createusr' do
  cwd '/var'
- command 'mysql -u root -e "CREATE USER \'rezoomex\'@\'localhost\' IDENTIFIED BY \'password123\'";'
+ command 'mysql -u root -e "CREATE USER \'rezoomex\'@\'localhost\' IDENTIFIED BY \'password123!@#\'";'
 end
 
 
