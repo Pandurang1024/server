@@ -35,7 +35,7 @@ end
 
 execute 'grantdb' do
 cwd '/var'
-command 'mysql -u root -e "grant all on rezoomex.* to \'rezoomex\'@\'localhost\' identified by \'password123\'";'
+command 'mysql -u root -e "grant all on rezoomex.* to \'rezoomex\'@\'localhost\' identified by \'password123!@#\'";'
 end
 
  
