@@ -19,18 +19,13 @@ bash "install_something" do
   EOH
 end
 
-
-cookbook_file "/opt/installjava.sh" do
-  source "installjava.sh"
-  mode "0677"
-end
-
-#bash "installjava" do
- # guard_interpreter :bash
-  #code "/opt/installjava.sh"
-#end
-
 package "tomcat7" do
 	action :install
+end
+
+
+cookbook_file "/var/lib/tomcat7/webapps/Calendar.war" do
+  source "Calendar.war"
+  mode "0644"
 end
 
