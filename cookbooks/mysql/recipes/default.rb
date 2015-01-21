@@ -24,6 +24,18 @@ end
 
 execute 'createdb' do
 cwd '/var'
-command 'mysql -u root -e "CREATE database IF NOT EXISTS rezoomex
-grant all on rezoomex.* to \'rezoomex\'@\'localhost\' identified by \'password123\'";'
+command 'mysql -u root -e "CREATE database IF NOT EXISTS rezoomex";'
 end
+
+execute 'usedb' do
+cwd '/var'
+command 'mysql -u root -e "use rezoomex";'
+end
+
+
+execute 'grantdb' do
+cwd '/var'
+command 'mysql -u root -e "grant all on rezoomex.* to \'rezoomex\'@\'localhost\' identified by \'password123\'";'
+end
+
+ 
